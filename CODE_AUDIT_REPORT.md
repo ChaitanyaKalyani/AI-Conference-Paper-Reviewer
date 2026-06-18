@@ -1718,4 +1718,3 @@ def clean_review_text(text):
 - [ ] Docker image builds
 - [ ] Documentation updated
 - [ ] Monitoring configured
-

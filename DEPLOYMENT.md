@@ -188,7 +188,7 @@ services:
 
 ### Development (.env)
 ```env
-OPENROUTER_API_KEY=your-openrouter-api-key
+OPENROUTER_API_KEY=your-openrouter-dev-key
 LLM_MODEL=openai/gpt-oss-20b:free
 LLM_TEMPERATURE=0
 LLM_TOP_P=0.1
@@ -201,7 +201,7 @@ LOG_LEVEL=debug
 
 ### Production (.env)
 ```env
-OPENROUTER_API_KEY=your-openrouter-api-key
+OPENROUTER_API_KEY=your-openrouter-prod-key
 LLM_MODEL=openai/gpt-4-turbo-preview
 LLM_TEMPERATURE=0
 LLM_TOP_P=0.1

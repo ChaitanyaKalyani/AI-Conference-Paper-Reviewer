@@ -8,7 +8,7 @@ load_dotenv()
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 
 # For development/testing without API key, show warning
-if not OPENROUTER_API_KEY or OPENROUTER_API_KEY.startswith("your-openrouter-api-key"):
+if not OPENROUTER_API_KEY or OPENROUTER_API_KEY == "your-openrouter-api-key":
     print("⚠️  WARNING: OPENROUTER_API_KEY not configured properly. Some features will not work.")
     print("Please set OPENROUTER_API_KEY in your .env file")
     OPENROUTER_API_KEY = "dummy_key_for_testing"
