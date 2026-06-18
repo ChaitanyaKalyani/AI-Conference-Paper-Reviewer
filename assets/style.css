@@ -1,0 +1,270 @@
+/* ============================================
+   PROFESSIONAL CONFERENCE PAPER REVIEWER UI
+   ============================================ */
+
+:root {
+    --primary: #6495ff;
+    --primary-dark: #4a7cff;
+    --text-primary: #ffffff;
+    --text-secondary: #cbd5e1;
+    --text-muted: #a0aec0;
+    --bg-primary: #0a0e27;
+    --bg-secondary: rgba(255,255,255,0.05);
+    --border-color: rgba(100, 150, 255, 0.3);
+}
+
+/* Main Background */
+.stApp {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, #0f1a3f 50%, #1a0b2e 100%);
+    color: var(--text-primary);
+}
+
+/* Hero Title */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    padding: 30px 0 10px;
+    background: linear-gradient(135deg, #ffffff 0%, #d0d5ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 50px;
+    letter-spacing: 0.3px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Glass Morphism Cards */
+.glass-card {
+    background: var(--bg-secondary);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    max-width: 900px;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.glass-card:hover {
+    transform: translateY(-8px);
+    border: 1px solid rgba(100, 150, 255, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 50px rgba(100, 150, 255, 0.25);
+}
+
+.center-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 140px;
+}
+
+.glass-card h2 {
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.glass-card h3 {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.glass-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.glass-card ul {
+    color: var(--text-primary);
+    padding-left: 20px;
+}
+
+.glass-card li {
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+}
+
+/* Metric Cards */
+.metric-card {
+    background: linear-gradient(135deg, rgba(100, 150, 255, 0.15) 0%, rgba(100, 150, 255, 0.05) 100%);
+    border-radius: 16px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    padding: 20px;
+}
+
+.metric-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border: 1px solid rgba(100, 150, 255, 0.6);
+    background: linear-gradient(135deg, rgba(100, 150, 255, 0.25) 0%, rgba(100, 150, 255, 0.1) 100%);
+    box-shadow: 0 20px 50px rgba(100, 150, 255, 0.3);
+}
+
+.metric-card h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5rem;
+    color: var(--primary);
+    line-height: 1;
+    font-weight: 900;
+}
+
+.metric-card h3 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.metric-card p {
+    margin: 10px 0 0 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Section Titles */
+.section-title {
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border-color);
+    letter-spacing: -0.5px;
+}
+
+/* Buttons */
+.stButton > button {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(100, 150, 255, 0.3);
+    width: auto;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(100, 150, 255, 0.5);
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.stTabs [data-baseweb="tab"] {
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding: 15px 0;
+}
+
+.stTabs [aria-selected="true"] {
+    color: var(--primary);
+    border-bottom-color: var(--primary) !important;
+}
+
+/* File Uploader */
+[data-testid="stFileUploader"] {
+    border-radius: 12px;
+    border: 2px dashed var(--border-color);
+    background: rgba(100, 150, 255, 0.05);
+}
+
+[data-testid="stFileUploader"]:hover {
+    border-color: rgba(100, 150, 255, 0.6);
+    background: rgba(100, 150, 255, 0.1);
+}
+
+/* Text Areas */
+.stTextArea > textarea {
+    background: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+}
+
+.stTextArea > textarea:focus {
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 0 0 3px rgba(100, 150, 255, 0.1) !important;
+}
+
+/* Subheaders */
+.stSubheader {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Alerts */
+.stSuccess {
+    background-color: rgba(74, 222, 128, 0.1) !important;
+    border: 1px solid rgba(74, 222, 128, 0.3) !important;
+    border-radius: 12px !important;
+}
+
+.stWarning {
+    background-color: rgba(250, 204, 21, 0.1) !important;
+    border: 1px solid rgba(250, 204, 21, 0.3) !important;
+    border-radius: 12px !important;
+}
+
+.stError {
+    background-color: rgba(239, 68, 68, 0.1) !important;
+    border: 1px solid rgba(239, 68, 68, 0.3) !important;
+    border-radius: 12px !important;
+}
+
+/* Expanders */
+[data-testid="stExpander"] {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-testid="stExpander"]:hover {
+    border: 1px solid var(--border-color);
+}
+
+/* Progress Bar */
+[data-testid="stProgress"] > div > div {
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+}

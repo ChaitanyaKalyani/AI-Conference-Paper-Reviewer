@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  paper-reviewer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    environment:
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY}
+      LLM_MODEL: ${LLM_MODEL:-openai/gpt-oss-20b:free}
+      LLM_TEMPERATURE: ${LLM_TEMPERATURE:-0}
+      LLM_TOP_P: ${LLM_TOP_P:-0.1}
+      MAX_PDF_PAGES: ${MAX_PDF_PAGES:-100}
+      MAX_TEXT_LENGTH: ${MAX_TEXT_LENGTH:-50000}
+      MAX_RETRIES: ${MAX_RETRIES:-3}
+      TIMEOUT_SECONDS: ${TIMEOUT_SECONDS:-30}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      STREAMLIT_SERVER_HEADLESS: "true"
+      STREAMLIT_SERVER_ADDRESS: "0.0.0.0"
+      STREAMLIT_SERVER_PORT: "8501"
+    volumes:
+      - ./output:/app/output
+      - ./dataset:/app/dataset
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
