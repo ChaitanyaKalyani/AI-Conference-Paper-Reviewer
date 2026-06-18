@@ -1,6 +1,5 @@
 streamlit==1.58.0
 pdfplumber==0.10.3
-PyPDF2==4.0.1
 nltk==3.8.1
 spacy==3.8.11
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
