@@ -48,6 +48,7 @@ review_report.pdf
 review_report.txt
 *.pdf
 *.txt
+!requirements.txt
 
 # API keys and credentials
 config.py (if it contains secrets)
